@@ -1,0 +1,9 @@
+# IDE
+*.vscode
+.DS_Store
+
+# JavaScript
+node_modules/
+
+# Environment variables
+.env

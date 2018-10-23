@@ -1,0 +1,16 @@
+{
+  "name": "elm-ac",
+  "description": "Writing Audience Center in Elm",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evelynting610/elm-ac.git"
+  },
+  "author": "Evelyn",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "civis-bootstrap": "file:externals/civis-bootstrap"
+  }
+}
