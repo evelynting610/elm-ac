@@ -1,0 +1,23 @@
+version: '3'
+services:
+  server:
+    image: postgrest/postgrest
+    ports:
+      - "3000:3000"
+    links:
+      - db:db
+    environment:
+      PGRST_DB_URI: postgres://postgrest:temp_password@db:5432/elm_ac
+      PGRST_DB_SCHEMA: api
+      PGRST_DB_ANON_ROLE: anonymous
+    depends_on:
+      - db
+
+  db:
+    image: postgres:10.3
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: elm_ac
+      POSTGRES_USER: postgrest
+      POSTGRES_PASSWORD: temp_password
